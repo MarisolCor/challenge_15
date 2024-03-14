@@ -42,7 +42,7 @@ d3.json(queryUrl).then(function (data) {
             +"<h3>Depth</h3> <h4>" + feature.geometry.coordinates[2] + " km</h4>");
         }
     });
-    d3.json('/static/plates.json').then(function (data){
+    d3.json('https://marisolcor.github.io/challenge_15/static/plates.json').then(function (data){
         platesObject=L.geoJson(data, {
             style:{
                 color: "red",
@@ -50,7 +50,7 @@ d3.json(queryUrl).then(function (data) {
             },
         });
         let plateGroupMarker =  L.layerGroup([platesObject]);
-        d3.json('/static/orogens.json').then(function (data){
+        d3.json('https://marisolcor.github.io/challenge_15/static/orogens.json').then(function (data){
             orogensObject=L.geoJson(data, { style:{
                     color: "black",
                     fillOpacity:0.1,
